@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EAE35A027CC364F008E4D7B /* DrugsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE359F27CC364F008E4D7B /* DrugsView.swift */; };
 		6ED2595527C39B3F0029C840 /* LifespanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2595427C39B3F0029C840 /* LifespanApp.swift */; };
 		6ED2595727C39B3F0029C840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2595627C39B3F0029C840 /* ContentView.swift */; };
 		6ED2595927C39B410029C840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED2595827C39B410029C840 /* Assets.xcassets */; };
 		6ED2595C27C39B410029C840 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED2595B27C39B410029C840 /* Preview Assets.xcassets */; };
 		6ED2596327C39B570029C840 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2596227C39B570029C840 /* Logic.swift */; };
 		6EEF41FD27CA21AE005DF02F /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF41FC27CA21AE005DF02F /* Launch.swift */; };
+		6EEF41FF27CA2255005DF02F /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF41FE27CA2255005DF02F /* BMIView.swift */; };
+		6EEF420327CA23A5005DF02F /* LifespanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF420227CA23A5005DF02F /* LifespanModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EAE359F27CC364F008E4D7B /* DrugsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsView.swift; sourceTree = "<group>"; };
 		6ED2595127C39B3F0029C840 /* Lifespan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifespan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED2595427C39B3F0029C840 /* LifespanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespanApp.swift; sourceTree = "<group>"; };
 		6ED2595627C39B3F0029C840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +27,8 @@
 		6ED2595B27C39B410029C840 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6ED2596227C39B570029C840 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		6EEF41FC27CA21AE005DF02F /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		6EEF41FE27CA2255005DF02F /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
+		6EEF420227CA23A5005DF02F /* LifespanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifespanModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				6ED2595427C39B3F0029C840 /* LifespanApp.swift */,
-				6ED2595627C39B3F0029C840 /* ContentView.swift */,
-				6EEF41FC27CA21AE005DF02F /* Launch.swift */,
+				6EEF420127CA2391005DF02F /* ViewModel */,
+				6EEF420027CA2380005DF02F /* Views */,
 				6ED2596227C39B570029C840 /* Logic.swift */,
 				6ED2595827C39B410029C840 /* Assets.xcassets */,
 				6ED2595A27C39B410029C840 /* Preview Content */,
@@ -71,6 +77,25 @@
 				6ED2595B27C39B410029C840 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6EEF420027CA2380005DF02F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EEF41FC27CA21AE005DF02F /* Launch.swift */,
+				6EEF41FE27CA2255005DF02F /* BMIView.swift */,
+				6EAE359F27CC364F008E4D7B /* DrugsView.swift */,
+				6ED2595627C39B3F0029C840 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EEF420127CA2391005DF02F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6EEF420227CA23A5005DF02F /* LifespanModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ED2595727C39B3F0029C840 /* ContentView.swift in Sources */,
+				6EEF420327CA23A5005DF02F /* LifespanModel.swift in Sources */,
+				6EAE35A027CC364F008E4D7B /* DrugsView.swift in Sources */,
 				6ED2596327C39B570029C840 /* Logic.swift in Sources */,
+				6EEF41FF27CA2255005DF02F /* BMIView.swift in Sources */,
 				6EEF41FD27CA21AE005DF02F /* Launch.swift in Sources */,
 				6ED2595527C39B3F0029C840 /* LifespanApp.swift in Sources */,
 			);

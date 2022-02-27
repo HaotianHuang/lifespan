@@ -11,7 +11,9 @@ import SwiftUI
 struct LifespanApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Launch()
+                .environmentObject(ContentModel())
+
         }
     }
 }

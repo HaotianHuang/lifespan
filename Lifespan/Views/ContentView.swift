@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var model: ContentModel
+
     @State var age = 25
-    
     @State var lrhf = 0
-    
     @State var sleepHours = 7
-    
     @State var sex = 1
-    
     @State var lifeLeft:Double = 78
     
     var body: some View {
@@ -46,14 +44,15 @@ struct ContentView: View {
                     }
                 }
   
-                VStack{
-                    Text("LRHF: ") + Text(String(lrhf))
-                    Picker("", selection: $lrhf) {
-                        ForEach(0...5, id: \.self){ i in
-                            Text("\(i)").tag(i)
-                        }
-                    }
-                }
+                // Removed as this should be calculated when calculate is hit.
+//                VStack{
+//                    Text("LRHF: ") + Text(String(lrhf))
+//                    Picker("", selection: $lrhf) {
+//                        ForEach(0...5, id: \.self){ i in
+//                            Text("\(i)").tag(i)
+//                        }
+//                    }
+//                }
                 
                 VStack{
                     Text("Sleep: ") + Text(String(sleepHours))
@@ -69,7 +68,15 @@ struct ContentView: View {
             
             
             Button{
-                lifeLeft = ApplySleepTax(sleepHours: sleepHours, lifeExpectancyLeft: CalculateLifeExpectancyBeforeSleep(sex: sex, age: age, lrhf: lrhf))
+            
+                if sex == 0{
+                    model.sex = 0
+                } else {
+                    model.sex = 1
+                }
+                model.CalculateLRHF()
+                lifeLeft = ApplySleepTax(sleepHours: sleepHours, lifeExpectancyLeft: CalculateLifeExpectancyBeforeSleep(sex: sex, age: age, lrhf: model.CalculateLRHF()))
+                
             } label: {
                 Text("Calculate")
             }

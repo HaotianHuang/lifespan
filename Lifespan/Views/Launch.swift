@@ -20,6 +20,10 @@ struct Launch: View {
             
             DrugsView()
             
+            DietView()
+            
+            ExerciseView()
+            
             ContentView()
         }.tabViewStyle(PageTabViewStyle())
     }

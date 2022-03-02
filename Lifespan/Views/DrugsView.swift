@@ -46,7 +46,8 @@ struct DrugsView: View {
             
             Button{
                 
-                
+                model.SetAlcohol(alcohol: localAlcohol)
+                model.SetSmoke(smoke: localSmoke)
                 
             } label:{
                 Text("Confirm")

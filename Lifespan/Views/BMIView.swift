@@ -10,7 +10,7 @@ import SwiftUI
 struct BMIView: View {
     
     @EnvironmentObject var model: ContentModel
-    @State private var localWeight:Int = 82
+    @State private var localWeight:Int = 60
     @State private var localHeight:Int = 169
 
     var body: some View {

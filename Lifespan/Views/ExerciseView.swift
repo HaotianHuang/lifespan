@@ -13,6 +13,7 @@ struct ExerciseView: View {
     @State private var exerciseTime: Int = 0
 
     
+    
     var body: some View {
         VStack{
             Text("How much exercise per day on average? (any form of moderate to vigorous sweating counts!)")

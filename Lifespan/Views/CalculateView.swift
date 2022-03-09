@@ -19,7 +19,7 @@ struct CalculateView: View {
             // calculate button here
             Button{
                 
-                lifeExpectancy = model.CalculateNet()
+                lifeExpectancy = model.CalculateLifeExpectancyV2()
                 
             } label: {
                 Text("Calculate")

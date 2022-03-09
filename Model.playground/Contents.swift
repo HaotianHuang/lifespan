@@ -1,5 +1,30 @@
 import Foundation
 
+
+func CoreEquation(_ a: Double, _ age: Int) -> Double{
+    return (a/55)*(105-Double(age))
+}
+
+// returns -1 if exercise out of range or negative
+func FemaleExerciseNet(age: Int, exercise: Double) -> Double{
+    
+    if 0..<0.5 ~= exercise{
+        return CoreEquation(0, age) - CoreEquation(4.8, age)
+    }
+    if 0.5..<1.9 ~= exercise{
+        return CoreEquation(4.8, age) - CoreEquation(4.8, age)
+    }
+    if 1.9..<3.4 ~= exercise{
+        return CoreEquation(6.1, age) - CoreEquation(4.8, age)
+    }
+    if 3.4..<5.4 ~= exercise{
+        print("hello")
+    }
+    return -1
+    
+}
+
+FemaleExerciseNet(age: 35, exercise: 3.5)
 // to find life expectancy left at age 32, do maleUSbase[32], to find for newborn do maleUSbase[0] range is 0<x<119
 let maleUSbase = [76.23,75.69,74.73,73.75,72.76,71.77,70.78,69.79,68.8,67.81,66.81,65.82,64.83,63.84,62.85,61.87,60.9,59.93,58.97,58.02,57.07,56.13,55.2,54.27,53.35,52.43,51.51,50.58,49.67,48.75,47.83,46.92,46,45.09,44.18,43.27,42.36,41.46,40.55,39.65,38.75,37.84,36.95,36.05,35.16,34.26,33.38,32.5,31.62,30.75,29.88,29.03,28.18,27.34,26.51,25.7,24.89,24.1,23.31,22.54,21.77,21.02,20.28,19.54,18.81,18.09,17.38,16.67,15.97,15.28,14.6,13.92,13.25,12.59,11.95,11.32,10.71,10.12,9.54,8.98,8.43,7.91,7.4,6.91,6.44,6,5.58,5.18,4.8,4.45,4.12,3.82,3.54,3.29,3.06,2.87,2.69,2.54,2.4,2.28,2.16,2.05,1.94,1.83,1.73,1.64,1.54,1.45,1.37,1.29,1.21,1.13,1.06,0.99,0.92,0.86,0.8,0.74,0.68,0.63]
 

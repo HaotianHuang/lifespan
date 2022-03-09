@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-     // RETIRED!!!!
+     // MARK: RETIRED!!!!
     
     @EnvironmentObject var model: ContentModel
 
@@ -76,8 +76,7 @@ struct ContentView: View {
                 } else {
                     model.sex = 1
                 }
-                model.CalculateLRHF()
-                lifeLeft = ApplySleepTax(sleepHours: sleepHours, lifeExpectancyLeft: CalculateLifeExpectancyBeforeSleep(sex: sex, age: age, lrhf: model.CalculateLRHF()))
+                lifeLeft = model.CalculateLifeExpectancyV2()
                 
             } label: {
                 Text("Calculate")

@@ -263,6 +263,7 @@ func FemaleAlcoholNet(age: Int, alcohol: Double) -> Double{
     if 15..<30 ~= alcohol{
 
         return CoreEquation(-0.4, age)
+        // Print
     }
     if alcohol > 30{
 

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+     // RETIRED!!!!
+    
     @EnvironmentObject var model: ContentModel
 
     @State var age = 25

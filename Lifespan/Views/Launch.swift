@@ -16,6 +16,8 @@ struct Launch: View {
         
         
         TabView{
+            BasicsView()
+            
             BMIView()
             
             DrugsView()
@@ -24,7 +26,10 @@ struct Launch: View {
             
             ExerciseView()
             
-            ContentView()
+            SleepView()
+            
+            CalculateView()
+            
         }.tabViewStyle(PageTabViewStyle())
     }
 }

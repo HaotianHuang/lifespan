@@ -23,9 +23,27 @@ class ContentModel: ObservableObject {
     @Published var exerciseTime: Int = 0
     // sex. 0==male, 1==female
     @Published var sex: Int = 1
+    @Published var age: Int = 30
+    // in hours per night
+    @Published var sleep: Int = 7
     
     init(){
         print("Content model initiated")
+    }
+    
+    func SetSex(sex: Int){
+        if sex == 1{
+            self.sex = 1
+            print("Sex: female")
+        } else if sex == 0{
+            self.sex = 0
+            print("Sex: male")
+        }
+    }
+    
+    func SetAge(age: Int){
+        self.age = age
+        print("Age: " + String(self.age))
     }
     
     func SetWeight(weight: Int){
@@ -60,6 +78,12 @@ class ContentModel: ObservableObject {
         
     }
     
+    func SetSleep(sleep: Int){
+        self.sleep = sleep
+        print("Sleep (hrs/night): " + String(self.sleep))
+    }
+    
+    // this is V1 of the model and I'm retiring this for V2
     func CalculateLRHF() -> Int{
         var lrhf:Int = 0
         
@@ -110,6 +134,12 @@ class ContentModel: ObservableObject {
         
         print("LRHF: " + String(lrhf))
         return lrhf
+        
+    }
+    
+    func CalculateNet() -> Double{
+        
+        return 0.0
         
     }
     

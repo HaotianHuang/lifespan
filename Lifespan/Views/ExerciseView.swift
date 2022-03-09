@@ -108,6 +108,8 @@ struct ExerciseView: View {
                         .foregroundColor(.white)
                 }
             }
+            
+            
 
 
 

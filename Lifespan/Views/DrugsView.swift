@@ -20,11 +20,7 @@ struct DrugsView: View {
                 VStack{
                     Text("Smoking (cigarettes/day)")
                     Picker("How many cigarettes do you smoke (if any)", selection: $localSmoke){
-//                        Text("Never smoke").tag(0)
-//                        Text("Quarter pack (5 cigarettes)").tag(5)
-//                        Text("Half pack (10 cigarettes)").tag(10)
-//                        Text("Three quart pack (15 cigarettes)").tag(15)
-//                        Text("Pack (20 cigarettes)").tag(20)
+
                         ForEach(0...100, id: \.self){ i in
                             Text(String(i)).tag(i)
                         }
